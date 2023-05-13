@@ -30,30 +30,30 @@
         if(isset($_POST['a_name']) && isset($_POST['a_date'])):
                 $imgs = str_replace(' ', '_', $_FILES['a_image']['name']);
                 $storedImage = "../images/";
-                $a_id = $_POST['a_id'];
+                // $a_id = $_POST['a_id'];
                 $a_name = $_POST['a_name'];
                 $a_category = $_POST['a_category'];
                 $a_date = $_POST['a_date'];
                 $a_description = $_POST['a_description'];
                 $flag = move_uploaded_file($_FILES['a_image']['tmp_name'], $storedImage.$imgs);
                 if(isset($_POST['btnSubmit'])):
-                    $sqlInsert = "INSERT INTO `art` (`a_id`,`a_name`, `a_date`, `a_category`, `a_description`, `a_image`) VALUES (?,?,?,?,?,?)";
+                    $sqlInsert = "INSERT INTO `art` (`a_name`, `a_date`, `a_category`, `a_description`, `a_image`) VALUES (?,?,?,?,?)";
                     $stmt = $db_link->prepare($sqlInsert);
-                    $execute = $stmt->execute(array("$a_id", "$a_name", "$a_date", "$a_category", "$a_description", "$imgs"));
+                    $execute = $stmt->execute(array("$a_name", "$a_date", "$a_category", "$a_description", "$imgs"));
                     if($execute){
                             echo '<script>alert("Added successfully")</script>';
                     }else{
                             echo "Failed ".$execute;
                     }
-                else:
-                    $sqlUpdate = "UPDATE `art` SET `a_id`=?,`a_name`=?,`a_date`=?,`a_category`=?,`a_description`=?,`a_image`=? WHERE `a_id` = ?";
-                    $stmt = $db_link->prepare($sqlUpdate);
-                    $execute = $stmt->execute(array("$a_id","$a_name","$a_date","$a_category","$a_description"," ","$a_id"));
-                    if($execute){
-                            header("Location: galleries.php");
-                    }else{
-                           echo "Failed".$execute;
-                    }
+                // else:
+                //     $sqlUpdate = "UPDATE `art` SET `a_id`=?,`a_name`=?,`a_date`=?,`a_category`=?,`a_description`=?,`a_image`=? WHERE `a_id` = ?";
+                //     $stmt = $db_link->prepare($sqlUpdate);
+                //     $execute = $stmt->execute(array("$a_id","$a_name","$a_date","$a_category","$a_description"," ","$a_id"));
+                //     if($execute){
+                //             header("Location: galleries.php");
+                //     }else{
+                //            echo "Failed".$execute;
+                //     }
                 endif;
         endif;
 
@@ -144,7 +144,7 @@
 <!--                        <td>--><?//=$row['a_description']?><!--</td>-->
                         <td><?=$row['cat_name']?></td>
                     <td>
-                        <a href="add_works.php?update_id=<?=$row['a_id']?>"><div class="button">Update</div></a>
+                        <!-- <a href="add_works.php?update_id=<?=$row['a_id']?>"><div class="button">Update</div></a> -->
                         <a href="add_works.php?del_id=<?=$row['a_id']?>"><div class="button">Delete</div></a>
                     </td>
                     </tr>
