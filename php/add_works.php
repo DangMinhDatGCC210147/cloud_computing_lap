@@ -37,9 +37,9 @@
                 $a_description = $_POST['a_description'];
                 $flag = move_uploaded_file($_FILES['a_image']['tmp_name'], $storedImage.$imgs);
                 if(isset($_POST['btnSubmit'])):
-                    $sqlInsert = "INSERT INTO `art` (`a_name`, `a_date`, `a_category`, `a_description`, `a_image`) VALUES (?,?,?,?,?)";
+                    $sqlInsert = "INSERT INTO `art` (`a_id`,`a_name`, `a_date`, `a_category`, `a_description`, `a_image`) VALUES (?,?,?,?,?,?)";
                     $stmt = $db_link->prepare($sqlInsert);
-                    $execute = $stmt->execute(array("$a_name", "$a_date", "$a_category", "$a_description", "$imgs"));
+                    $execute = $stmt->execute(array("$a_id", "$a_name", "$a_date", "$a_category", "$a_description", "$imgs"));
                     if($execute){
                             echo '<script>alert("Added successfully")</script>';
                     }else{
