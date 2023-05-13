@@ -1,0 +1,7 @@
+.contact{
+    display: flex;
+    margin-right: 20px;
+}
+.contact a i{
+    margin-left: 25px;
+}
