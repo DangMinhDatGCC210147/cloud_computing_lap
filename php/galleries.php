@@ -1,5 +1,5 @@
 <?php
-    include_once 'header.php';
+    include_once('header.php');
     date_default_timezone_set('Asia/Ho_Chi_Minh');
 ?>
 <!-- Link for css -->
