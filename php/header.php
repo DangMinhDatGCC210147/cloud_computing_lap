@@ -73,7 +73,7 @@
         <div class="navbar-nav">
             <a class="nav-link active" style="color: #ffffff;" href="../php/index.php">Home</a>
             <a href="../php/galleries.php" class="nav-link" style="color: #ffffff;">Galleries</a>
-            <a href="" class="nav-link" style="color: #ffffff;">Photo</a>
+            <a href="../php/blog.php" class="nav-link" style="color: #ffffff;">Blog</a>
             <a class="nav-link" href="../php/category.php" style="color: #ffffff;">Category</a>
             <!-- <a class="nav-link" href="" style="color: #ffffff;">Attendance</a>
             <a class="nav-link" href=""style="color: #ffffff;">Activities</a>

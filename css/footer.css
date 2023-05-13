@@ -7,11 +7,10 @@
     --black: #000000;
 }
 footer{
-    background: var(--blue) !important;
+    background-color: var(--blue) !important;
     color: white;
     /*margin-top:100px;*/
-}
-  
+} 
 .copy {
     font-size: 12px;
     padding: 10px;
@@ -35,3 +34,6 @@ footer .title{
     font-weight: bold;
 }
 
+.disc{
+    text-align: justify;
+}
