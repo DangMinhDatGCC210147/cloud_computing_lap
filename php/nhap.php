@@ -52,10 +52,6 @@ include_once 'header.php';
                                 }
                         endif;
                 endif;
-                if(empty($error))
-                {
-                        $iseet = $db->fetchOne("CategoyID", "Category = '".$data['Category']."' ");
-                                }
                 ?>
                 <form id="form1" name="form1" method="post" action="" class="form-horizontal" role="form">
                     <div class="form-group pb-3 pt-3">
