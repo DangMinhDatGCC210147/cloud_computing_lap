@@ -25,7 +25,7 @@
             <!--Column1-->
                 <div class="footer-pad">
                     <h4 class="text-uppercase">About us</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, dignissimos pariatur iste qui tenetur tempore voluptatibus neque architecto, modi, minus id nulla. A eos dignissimos eveniet aliquam nam! Possimus, dignissimos?</p>
+                    <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, dignissimos pariatur iste qui tenetur tempore voluptatibus neque architecto, modi, minus id nulla. A eos dignissimos eveniet aliquam nam! Possimus, dignissimos?</p>
                 </div>
             </div>
     </div>
