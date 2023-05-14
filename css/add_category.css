@@ -22,3 +22,9 @@
 h1{
     text-align: center;
 }
+
+/* Radio button */
+input[type="radio"]:checked {
+    /* Specify the desired color */
+    background-color: var(--navy); 
+}

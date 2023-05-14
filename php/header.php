@@ -71,7 +71,7 @@
 
 <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
         <div class="navbar-nav">
-            <a class="nav-link active" style="color: #ffffff;" href="../php/index.php">Home</a>
+            <a class="nav-link" style="color: #ffffff;" href="../php/index.php">Home</a>
             <a href="../php/galleries.php" class="nav-link" style="color: #ffffff;">Galleries</a>
             <a href="../php/blog.php" class="nav-link" style="color: #ffffff;">Blog</a>
             <a class="nav-link" href="../php/category.php" style="color: #ffffff;">Category</a>

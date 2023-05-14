@@ -5,3 +5,8 @@
 .contact a i{
     margin-left: 25px;
 }
+.nav-link{
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+}

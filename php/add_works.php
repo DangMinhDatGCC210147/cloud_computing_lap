@@ -2,9 +2,9 @@
     include_once 'header.php';
 ?>
 <!-- Link css -->
-<link rel='stylesheet' type='text/css' href='../css/add_works.css'/>
-<link rel='stylesheet' type='text/css' href='../css/header.css'/>
-<link rel='stylesheet' type='text/css' href='../css/footer.css'/>
+    <link rel='stylesheet' type='text/css' href='../css/add_works.css'/>
+    <link rel='stylesheet' type='text/css' href='../css/header.css'/>
+    <link rel='stylesheet' type='text/css' href='../css/footer.css'/>
 <!--  -->
 <!--PHP  -->
     <?php
@@ -41,7 +41,7 @@
                     $stmt = $db_link->prepare($sqlInsert);
                     $execute = $stmt->execute(array("$a_name", "$a_date", "$a_category", "$a_description", "$imgs"));
                     if($execute){
-                            echo '<script>alert("Added successfully")</script>';
+                            header("Location: galleries.php");
                     }else{
                             echo "Failed ".$execute;
                     }
@@ -80,7 +80,7 @@
                                 include_once 'connect.php';
                                 $conn = new Connect();
                                 $db_link = $conn->connectToMySQL();
-                                $sql = "SELECT * FROM category";
+                                $sql = "SELECT * FROM category WHERE `cat_type` = 'Artwork'";
                                 $re = $db_link->query($sql);
                                 while($row = $re->fetch_assoc()):
                             ?>
@@ -107,7 +107,7 @@
                         <input type="file" name="a_image" id="a_image" class="form-control" value="<?php echo isset($imgs)?($imgs):"";?>">
                     </div>
                 <!-- </div> -->
-                <input type="submit" name="<?php echo isset($_GET["update_id"])?"btnRenew":"btnSubmit"; ?>" id="btnAction" value='<?php echo isset($_GET["update_id"])?"Renew":"Submit"; ?>' class="formbold-btn" style="font-size: 20px;">
+                <input type="submit" name="<?php echo isset($_GET["update_id"])?"btnRenew":"btnSubmit"; ?>" id="btnAction" value='<?php echo isset($_GET["update_id"])?"Renew":"Submit"; ?>' class="formbold-btn" style="font-size: 20px; background-color:#2B3467">
                 </input>
             </div>
         </form>
@@ -176,5 +176,5 @@
 
 <!--  -->
 <?php
-    include_once 'footer.php'
+    include_once 'footer.php';
 ?>

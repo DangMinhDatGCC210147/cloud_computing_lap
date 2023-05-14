@@ -26,17 +26,14 @@
                             $stmt->execute(array($a_id));
                             $re = $stmt->fetch(PDO::FETCH_BOTH);
                             // $date = $re['a_name'];
-                            $newDate = date("M-d-Y",strtotime($re['a_date']))  
+                            $newDate = date("M d, Y",strtotime($re['a_date']))  
                         ?>
-                        <img id="myImg" src="../images/<?=$re['a_image']?>" alt="Image">
-
-                                    <div id="myModal" class="modal">
-
-                                    <span class="close">&times;</span>
-                                    <img class="modal-content" id="img01">
-                                    <div id="caption"><?=$re['a_name']?></div>
-
-                                    </div>
+                            <img id="myImg" src="../images/<?=$re['a_image']?>" alt="<?=$re['a_name']?>">
+                            <div id="myModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img01">
+                                <div id="caption"><?=$re['a_name']?></div>
+                            </div>
                     </div>
                     <div class="card-right col-lg-6">
                         <div class="article">
@@ -66,4 +63,4 @@ endif;
 <?php
     include_once 'footer.php';
 ?>
-<script src="../detail.js"></script>
+<script src="../js/detail.js"></script>

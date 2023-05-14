@@ -12,8 +12,6 @@
   
 }
 * {
-    margin: auto;
-    padding: auto;
     box-sizing: border-box;
     font-size: 16px;
 }
@@ -31,13 +29,13 @@ body {
     margin: 0;
     padding: 0;
 }
-a.nav-link{
+/* a.nav-link{
     align-items: center;
     justify-content: center;
     position: relative;
     text-align: center;
     padding: 0;
-}
+} */
 .formbold-form-wrapper {
     margin: 0 auto;
     max-width: 550px;
@@ -159,19 +157,17 @@ form{
     border-radius: 6px;
     position: relative;
   }
-a{
+/* a{
     font-family: inherit;
     display: inline-block;
     width: 5em;
     height: 2.2em;
     line-height: 2em;
     overflow: hidden;
-    /* margin: 5px; */
     font-size: 17px;
     z-index: 1;
-    /* border-radius: 6px; */
     position: relative;
-}  
+}   */
 .button::before {
     position: absolute;
     content: "";

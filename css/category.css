@@ -24,7 +24,9 @@
 .table td a i{
     padding: 0 10px 0 10px;
 }
-
+td{
+    justify-content: center;
+}
 /* Button */
 .button2 {
     display: inline-block;
@@ -95,7 +97,65 @@
     background-color: var(--navy);
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
-.button2{
+.button2.adding{
     margin: 20px 0 0 20px;
+    text-align: center;
 }
 /*  */
+/* Button delete */
+.button3 {
+    font-family: inherit;
+    display: inline-block;
+    width: 5em;
+    height: 2.2em;
+    line-height: 2em;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+    border-radius: 6px;
+    position: relative;
+  }
+/* a{
+    font-family: inherit;
+    display: inline-block;
+    width: 5em;
+    height: 2.2em;
+    line-height: 2em;
+    overflow: hidden;
+    font-size: 17px;
+    z-index: 1;
+    position: relative;
+}   */
+.button3::before {
+    position: absolute;
+    content: "";
+    background: var(--navy);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  
+.button3:hover {
+    color: white;
+  }
+  
+.button3:before {
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+}
+  
+.button3:hover::before {
+    top: -30px;
+    left: -30px;
+}
+/* Button delete */
+
+.nav-link{
+    justify-content: center;
+    text-align: center;
+}
