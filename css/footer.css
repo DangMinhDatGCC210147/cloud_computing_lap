@@ -6,6 +6,9 @@
     --white: #ffffff;
     --black: #000000;
 }
+*{
+    font-size: 16px;
+}
 footer{
     background-color: var(--blue) !important;
     color: white;
